@@ -1,9 +1,10 @@
 class Character {
-  constructor(hp, dmg, mana, status) {
+  constructor(hp, dmg, mana, status, name) {
     this.hp = hp;
     this.dmg = dmg;
     this.mana = mana;
     this.status = status;
+    this.name = name;
   }
 
   takeDamage = (dmgReceived) => {
@@ -23,14 +24,6 @@ class Character {
 
   loser = () => {
     this.status = "loser";
-  }
-
-  hasEnoughMana = (manaCost) => {
-    manaCost <= this.mana ? true : false;
-  }
-
-  reduceMana = (manaCost) => {
-    this.mana -= manaCost;
   }
 
 }
